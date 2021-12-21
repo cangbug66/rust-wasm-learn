@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web rust wasm</title>
+</head>
+<body>
+    
+</body>
+<script type="module">
+    import init, { echo } from "./pkg/mywasm.js"
+    // 此步会卡住，等待wasm加载完毕。
+    // ​此写法仅为了简单方便显示
+    //实际开发中，需要 async/await 两者配合使用
+    await init()
+    echo(["web test"])
+</script>
+</html>
